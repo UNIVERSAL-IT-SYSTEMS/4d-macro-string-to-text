@@ -8,6 +8,8 @@ Replace deprecated variable/array declarations in legacy 4D code.
 $code:=macro_replace_deprecated_types (Current method path)
 ```
 
+---
+
 * Example
 
 ```
@@ -36,23 +38,6 @@ $code:=macro_replace_deprecated_types (Current method path)
 
 SET TEXT TO PASTEBOARD($code)
 ```
-
-* Global Replace
-
-```
-METHOD GET PATHS(Path all objects;$paths)
-
-For ($i;1;Size of array($paths))
-
-$path:=$paths{$i}
-
-If ($path#Current method path)
-METHOD SET CODE($path;macro_replace_deprecated_types ($path))
-End if 
-
-End for 
-```
-
 
 * Result
 
@@ -84,10 +69,33 @@ $code:=macro_replace_deprecated_types (Current method path)
 SET TEXT TO PASTEBOARD($code)
 ```
 
+---
+
+* Global Replace (not recommneded!)
+
+```
+METHOD GET PATHS(Path all objects;$paths)
+
+For ($i;1;Size of array($paths))
+
+$path:=$paths{$i}
+
+If ($path#Current method path)
+METHOD SET CODE($path;macro_replace_deprecated_types ($path))
+End if 
+
+End for 
+```
+
 ###As a macro
 
-<img width="249" alt="macro-menu" src="https://cloud.githubusercontent.com/assets/1725068/16514477/259ef8ba-3fa7-11e6-8c21-3b3ffc39a545.png">
+* Before
 <img width="746" alt="before" src="https://cloud.githubusercontent.com/assets/1725068/16514484/2cebccb0-3fa7-11e6-9c87-ca2b1e33a27e.png">
+
+* After
+ 
 <img width="746" alt="after" src="https://cloud.githubusercontent.com/assets/1725068/16514485/302dd616-3fa7-11e6-8be3-744fbe6e25e1.png">
 
+* The macro
 
+<img width="249" alt="macro-menu" src="https://cloud.githubusercontent.com/assets/1725068/16514477/259ef8ba-3fa7-11e6-8c21-3b3ffc39a545.png">
