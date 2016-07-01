@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE macros SYSTEM "http://www.4d.com/dtd/2007/macros.dtd" >
+<macros>
+  <macro
+    in_menu="true"
+    in_toolbar="true"
+    name="Update deprecated declarations"
+    type_ahead="false"
+    type_ahead_text=""
+    version="2">
+    <text><method>macro_replace_deprecated_types(&quot;<method_path />&quot;;&quot;<method_name />&quot;)</method></text>
+  </macro>
+</macros>
