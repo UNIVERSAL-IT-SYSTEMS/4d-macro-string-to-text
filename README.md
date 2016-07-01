@@ -37,6 +37,23 @@ $code:=macro_replace_deprecated_types (Current method path)
 SET TEXT TO PASTEBOARD($code)
 ```
 
+* Global Replace
+
+```
+METHOD GET PATHS(Path all objects;$paths)
+
+For ($i;1;Size of array($paths))
+
+$path:=$paths{$i}
+
+If ($path#Current method path)
+METHOD SET CODE($path;macro_replace_deprecated_types ($path))
+End if 
+
+End for 
+```
+
+
 * Result
 
 ```
