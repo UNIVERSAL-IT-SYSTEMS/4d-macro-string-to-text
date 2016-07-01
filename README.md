@@ -8,8 +8,6 @@ Replace deprecated variable/array declarations in legacy 4D code.
 $code:=macro_replace_deprecated_types (Current method path)
 ```
 
----
-
 * Example
 
 ```
@@ -69,8 +67,6 @@ $code:=macro_replace_deprecated_types (Current method path)
 SET TEXT TO PASTEBOARD($code)
 ```
 
----
-
 * Global Replace (not recommneded!)
 
 ```
@@ -90,6 +86,7 @@ End for
 ###As a macro
 
 * Before
+
 <img width="746" alt="before" src="https://cloud.githubusercontent.com/assets/1725068/16514484/2cebccb0-3fa7-11e6-9c87-ca2b1e33a27e.png">
 
 * After
